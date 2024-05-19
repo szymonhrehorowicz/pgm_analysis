@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1715528565 source:c:\users\patryk\documents\codeblocks\wczytywanie_pliku\main.cpp
-	<iostream>
-	<fstream>
-	<string>
-	<vector>
-
