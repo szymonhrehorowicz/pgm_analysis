@@ -6,6 +6,11 @@
 using namespace std;
 
 int main() {
+    int widmo[256], t=0;
+    for(int i = 0; i < 256; ++i)
+        {
+            widmo[i]=0;
+        }
     double wynik=0.0;
     ifstream plik("feep.pgm"); // Otwarcie pliku do odczytu
 
@@ -35,6 +40,8 @@ int main() {
     for (int i = 0; i < height; ++i) {
         for (int j = 0; j < width; ++j) {
             plik >> szarosci[i][j];
+            t=szarosci[i][j];
+            widmo[t]=widmo[t]+1;
         }
     }
 
@@ -62,6 +69,13 @@ int main() {
     printf("\nUdzial perlitu ");
     printf("%f",wynik);
     cout<<"%C"<<endl;
+    cout<<endl;
+    cout<<"Widmo:"<<endl;
+    for(int i = 0; i < 256; ++i)
+        {
+            cout<<i<<"   "<<widmo[i]<<endl;
+        }
+    cout<<endl;
     plik.close(); // Zamkni�cie pliku
 
     return 0;
